@@ -24,6 +24,8 @@ namespace BDRetail.Persistance
             new ProductCategoryEntityConfiguration().Configure(modelBuilder.Entity<ProductCategory>());
 
             new ProductImageEntityConfiguration().Configure(modelBuilder.Entity<ProductImage>());
+
+            new ProductRelationEntityConfiguration().Configure(modelBuilder.Entity<ProductRelation>());
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -35,5 +37,7 @@ namespace BDRetail.Persistance
         public DbSet<ProductCategory> ProductCategories { get; set; }
 
         public DbSet<ProductImage> ProductImages { get; set; }
+
+        public DbSet<ProductRelation> ProductRelations { get; set; }
     }
 }
