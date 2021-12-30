@@ -17,10 +17,14 @@ namespace BDRetail.Persistance
         {
             base.OnModelCreating(modelBuilder);
 
+            new UserProfileEntityConfiguration().Configure(modelBuilder.Entity<UserProfile>());
+
             new ProductEntityConfiguration().Configure(modelBuilder.Entity<Product>());
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
+        public DbSet<UserProfile> UserProfiles { get; set; }
 
         public DbSet<Product> Products { get; set; }
     }
