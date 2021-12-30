@@ -38,6 +38,8 @@ namespace BDRetail.Persistance
             new OrderLineEntityConfiguration().Configure(modelBuilder.Entity<OrderLine>());
 
             new OrderFailureEntityConfiguration().Configure(modelBuilder.Entity<OrderFailure>());
+
+            new DiscountEntityConfiguration().Configure(modelBuilder.Entity<Discount>());
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -63,5 +65,7 @@ namespace BDRetail.Persistance
         public DbSet<OrderLine> OrderLines { get; set; }
 
         public DbSet<OrderFailure> OrderFailures { get; set; }
+
+        public DbSet<Discount> Discounts { get; set; }
     }
 }
