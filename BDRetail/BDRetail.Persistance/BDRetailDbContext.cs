@@ -40,6 +40,8 @@ namespace BDRetail.Persistance
             new OrderFailureEntityConfiguration().Configure(modelBuilder.Entity<OrderFailure>());
 
             new DiscountEntityConfiguration().Configure(modelBuilder.Entity<Discount>());
+
+            new PaymentTransactionEntityConfiguration().Configure(modelBuilder.Entity<PaymentTransaction>());
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -67,5 +69,7 @@ namespace BDRetail.Persistance
         public DbSet<OrderFailure> OrderFailures { get; set; }
 
         public DbSet<Discount> Discounts { get; set; }
+
+        public DbSet<PaymentTransaction> PaymentTransactions { get; set; }
     }
 }
