@@ -32,6 +32,8 @@ namespace BDRetail.Persistance
             new OrderHistoryEntityConfiguration().Configure(modelBuilder.Entity<OrderHistory>());
 
             new OrderBillingDetailsEntityConfiguration().Configure(modelBuilder.Entity<OrderBillingDetails>());
+
+            new OrderDeliveryDetailsEntityConfiguration().Configure(modelBuilder.Entity<OrderDeliveryDetails>());
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -51,5 +53,7 @@ namespace BDRetail.Persistance
         public DbSet<OrderHistory> OrderHistories { get; set; }
 
         public DbSet<OrderBillingDetails> OrderBillingDetails { get; set; }
+
+        public DbSet<OrderDeliveryDetails> OrderDeliveryDetails { get; set; }
     }
 }
