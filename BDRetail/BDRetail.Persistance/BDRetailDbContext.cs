@@ -20,6 +20,8 @@ namespace BDRetail.Persistance
             new UserProfileEntityConfiguration().Configure(modelBuilder.Entity<UserProfile>());
 
             new ProductEntityConfiguration().Configure(modelBuilder.Entity<Product>());
+
+            new ProductCategoryEntityConfiguration().Configure(modelBuilder.Entity<ProductCategory>());
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -27,5 +29,7 @@ namespace BDRetail.Persistance
         public DbSet<UserProfile> UserProfiles { get; set; }
 
         public DbSet<Product> Products { get; set; }
+
+        public DbSet<ProductCategory> ProductCategories { get; set; }
     }
 }
