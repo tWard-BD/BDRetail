@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using BDRetail.Persistance.Models;
+using BDRetail.Persistance.ModelsConfiguration;
 
 namespace BDRetail.Persistance
 {
@@ -14,6 +16,10 @@ namespace BDRetail.Persistance
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            new ProductEntityConfiguration().Configure(modelBuilder.Entity<Product>());
         }
+
+        public DbSet<Product> Products { get; set; }
     }
 }
