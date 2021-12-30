@@ -28,6 +28,8 @@ namespace BDRetail.Persistance
             new ProductRelationEntityConfiguration().Configure(modelBuilder.Entity<ProductRelation>());
 
             new OrderEntityConfiguration().Configure(modelBuilder.Entity<Order>());
+
+            new OrderHistoryEntityConfiguration().Configure(modelBuilder.Entity<OrderHistory>());
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -43,5 +45,7 @@ namespace BDRetail.Persistance
         public DbSet<ProductRelation> ProductRelations { get; set; }
 
         public DbSet<Order> Orders { get; set; }
+
+        public DbSet<OrderHistory> OrderHistories { get; set; }
     }
 }
