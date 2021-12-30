@@ -20,6 +20,8 @@ namespace BDRetail.Persistance
             new ProductEntityConfiguration().Configure(modelBuilder.Entity<Product>());
         }
 
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
         public DbSet<Product> Products { get; set; }
     }
 }
